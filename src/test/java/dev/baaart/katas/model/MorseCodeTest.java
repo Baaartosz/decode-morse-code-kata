@@ -7,21 +7,19 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MorseCodeTest {
 
-    private final MorseCode morseCode = new MorseCode();
-
     @Test
     void getSingleChar() {
-        assertEquals("J", morseCode.get(".---"));
-        assertEquals("L", morseCode.get(".-.."));
+        assertEquals("J", MorseCode.get(".---"));
+        assertEquals("L", MorseCode.get(".-.."));
     }
 
     @Test
     void getSOS(){
-        assertEquals("SOS", morseCode.get("...---..."));
+        assertEquals("SOS", MorseCode.get("...---..."));
     }
 
     @Test
     void getNonValid(){
-        assertNull(morseCode.get("...-.-.-..."));
+        assertNull(MorseCode.get("...-.-.-..."));
     }
 }
